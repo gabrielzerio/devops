@@ -12,7 +12,7 @@ on:
         type: string
     # 3. (Opcional) Defina segredos que o workflow precisa receber
     secrets:
-      API_URL:
+      API_TOKEN:
         required: true
 
 jobs:
@@ -35,4 +35,4 @@ jobs:
     # - run: npm ci
     # - run: npm run build --if-present
     # - run: npm test
-    - run: echo "Hello World!" 
+    - run: echo "versão ${{ inputs.version }}"  
