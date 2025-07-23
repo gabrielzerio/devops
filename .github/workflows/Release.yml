@@ -16,10 +16,10 @@ jobs:
     steps:
       - name: Print received values
         run: |
-          echo "Valor do Input 'config-path': ${{ inputs.config-path }}"
-          echo "O Secret 'token' será mascarado: ${{ secrets.token }}"
+          echo "Valor do Input 'config-path': ${{ inputs.version }}"
+          echo "O Secret 'token' será mascarado: ${{ secrets.API_TOKEN }}"
 
       - uses: actions/labeler@v4
         with:
-          repo-token: ${{ secrets.token }}
-          configuration-path: ${{ inputs.config-path }}
+          repo-version: ${{ inputs.version }}
+          secret_apitoken: ${{ secrets.API_TOKEN }}
